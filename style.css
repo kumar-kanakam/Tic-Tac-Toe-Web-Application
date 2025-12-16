@@ -1,0 +1,175 @@
+/* ===== Google Font ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* ===== Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Body ===== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+/* ===== Container ===== */
+.container {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    padding: 30px;
+    border-radius: 20px;
+    width: 360px;
+    text-align: center;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+    animation: fadeIn 0.6s ease;
+}
+
+.container.game-over {
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+}
+
+/* ===== Title ===== */
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+/* ===== Message ===== */
+.message {
+    margin: 12px 0 18px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffd369;
+}
+
+/* ===== Board ===== */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 20px 0;
+}
+
+/* ===== Cells ===== */
+.cell {
+    width: 95px;
+    height: 95px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: inset 0 0 10px rgba(255,255,255,0.1);
+}
+
+/* Hover only for empty cells */
+a.cell:hover {
+    background: rgba(255,255,255,0.25);
+    transform: scale(1.05);
+}
+
+/* Filled cell */
+.cell.filled {
+    cursor: default;
+    background: rgba(0,0,0,0.35);
+}
+
+/* X and O colors */
+.cell.filled:contains("X") {
+    color: #4dd0e1;
+}
+
+.cell.filled:contains("O") {
+    color: #ff8a65;
+}
+
+/* ===== Buttons ===== */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.buttons a {
+    flex: 1;
+    margin: 0 6px;
+    padding: 12px 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,114,255,0.4);
+}
+
+.buttons a.back {
+    background: linear-gradient(135deg, #ff512f, #dd2476);
+    box-shadow: 0 10px 20px rgba(221,36,118,0.4);
+}
+
+.buttons a:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+/* ===== Select Mode Page ===== */
+.mode-container {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    padding: 40px 50px;
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+}
+
+.mode-container h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.mode-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.mode-buttons a {
+    padding: 16px 28px;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+    transition: all 0.3s ease;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+.mode-buttons a:hover {
+    transform: translateY(-4px) scale(1.05);
+    opacity: 0.95;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .mode-buttons {
+        flex-direction: column;
+    }
+}

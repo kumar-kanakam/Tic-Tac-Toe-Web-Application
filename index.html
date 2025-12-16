@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'game/style.css' %}">
+</head>
+<body>
+
+<div class="container {% if game_over %}game-over{% endif %}">
+    <h1>Tic Tac Toe</h1>
+    <div class="message">{{ message }}</div>
+
+    <div class="board">
+        {% for cell in board %}
+    {% if cell == "" and not game_over %}
+        <a href="{% url 'move' forloop.counter0 %}" class="cell"></a>
+    {% else %}
+        <div class="cell filled">{{ cell }}</div>
+    {% endif %}
+{% endfor %}
+    </div>
+
+    <div class="buttons">
+        <a href="{% url 'reset' %}">Reset</a>
+        <a href="{% url 'back' %}" class="back">Back</a>
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'game/style.css' %}">
+</head>
+<body>
+
+<div class="mode-container">
+    <h2>Select Game Mode</h2>
+
+    <div class="mode-buttons">
+        <a href="{% url 'start' 'pvp' %}">Player vs Player</a>
+        <a href="{% url 'start' 'pvc' %}">Player vs Computer</a>
+    </div>
+</div>
+
+</body>
+</html>
