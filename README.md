@@ -30,7 +30,7 @@ A modern **Tic Tac Toe web application** built using **Python & Django**, suppor
 
 | Home Page | Game Page |
 |----------|-----------|
-| ![Home](https://github.com/kumar-kanakam/Tic-Tac-Toe-Web-Application/blob/main/Screenshot%202025-12-16%20184618.png) | ![Game]([screenshots/game.png](https://github.com/kumar-kanakam/Tic-Tac-Toe-Web-Application/blob/main/Screenshot%202025-12-16%20184638.png)) |
+| ![Home](https://github.com/kumar-kanakam/Tic-Tac-Toe-Web-Application/blob/main/Screenshot%202025-12-16%20184618.png) | ![Game](https://github.com/kumar-kanakam/Tic-Tac-Toe-Web-Application/blob/main/Screenshot%202025-12-16%20184638.png) |
 
 ---
 
